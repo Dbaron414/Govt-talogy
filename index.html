@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talogy Workstream Dashboard | Dawn</title>
+  <style>
+    :root {
+      --talogy-navy: #072b61;
+      --talogy-blue: #1159c7;
+      --talogy-cyan: #00a9ce;
+      --talogy-bg: #f5f8fc;
+      --talogy-text: #183153;
+      --talogy-muted: #5a6b85;
+      --success: #0f9d58;
+      --warning: #f9a825;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--talogy-text);
+      background: linear-gradient(180deg, #eef4ff 0%, var(--talogy-bg) 100%);
+    }
+
+    .topbar {
+      background: linear-gradient(110deg, var(--talogy-navy) 0%, var(--talogy-blue) 70%, var(--talogy-cyan) 100%);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(7, 43, 97, 0.2);
+    }
+
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .brand p {
+      margin: 0.3rem 0 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+    }
+
+    .link-btn {
+      text-decoration: none;
+      background: #fff;
+      color: var(--talogy-navy);
+      border-radius: 999px;
+      padding: 0.65rem 1rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1.2rem;
+    }
+
+    .summary {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 10px 25px rgba(18, 53, 97, 0.08);
+      border: 1px solid #dce7fb;
+      margin-bottom: 1rem;
+    }
+
+    .summary h2 {
+      margin: 0 0 0.45rem;
+      font-size: 1.2rem;
+      color: var(--talogy-navy);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #dce7fb;
+      box-shadow: 0 8px 20px rgba(18, 53, 97, 0.07);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .ws {
+      font-size: 0.84rem;
+      letter-spacing: 0.35px;
+      text-transform: uppercase;
+      color: var(--talogy-blue);
+      font-weight: 700;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.02rem;
+      color: #15396f;
+    }
+
+    .chip {
+      display: inline-block;
+      width: fit-content;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.6rem;
+      font-weight: 700;
+      background: #e8f6ff;
+      color: #005985;
+    }
+
+    .chip.warning {
+      background: #fff4d8;
+      color: #875800;
+    }
+
+    .timeline {
+      border-left: 3px solid #deebff;
+      padding-left: 0.7rem;
+      margin: 0;
+      color: var(--talogy-muted);
+      font-size: 0.92rem;
+    }
+
+    .timeline li { margin-bottom: 0.3rem; }
+
+    .timeline strong { color: #193f78; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div>
+        <h1>Talogy Workstream Dashboard</h1>
+        <p>Dawn's update tracker for priority workstreams and milestones</p>
+      </div>
+      <a class="link-btn" href="https://psienterprises.sharepoint.com/:x:/r/sites/TalentMeasurementContent/_layouts/15/Doc.aspx?sourcedoc=%7B642AA17F-326F-4FBE-89CC-9BA7D935A3D6%7D&file=Packages%20Playbook%20Framework.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=OFFICECOM-WEB.REDIRECT%2CAPPHOME-WEB.JUMPBACKIN&wdPreviousSession=06d165a2-912d-424c-98e4-c79fe8d2e5a0&wdPreviousSessionSrc=AppHomeWeb&ct=1773408050678" target="_blank" rel="noopener noreferrer">Explain these updates ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <h2>Current focus</h2>
+      <p>Workstreams 1, 2, 6, and 7 are currently owned by Dawn. Two strategic foundations (Narrative and Use Cases) complete by <strong>March 31</strong>, with pricing and collateral rollout extending into <strong>April 30</strong>.</p>
+    </section>
+
+    <section class="grid" aria-label="Dawn workstream updates">
+      <article class="card">
+        <span class="ws">Workstream 1</span>
+        <h3>Solution Narrative &amp; Market Positioning</h3>
+        <span class="chip">On Track</span>
+        <ul class="timeline">
+          <li><strong>Scope:</strong> All products.</li>
+          <li><strong>Target completion:</strong> March 31.</li>
+          <li><strong>Update:</strong> Consolidated narrative and positioning track to full portfolio completion.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="ws">Workstream 2</span>
+        <h3>Defined Use Case &amp; Target Population</h3>
+        <span class="chip">On Track</span>
+        <ul class="timeline">
+          <li><strong>Scope:</strong> All products.</li>
+          <li><strong>Target completion:</strong> March 31.</li>
+          <li><strong>Update:</strong> Core use-case definition and population mapping aligned with launch planning.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="ws">Workstream 6</span>
+        <h3>Pricing</h3>
+        <span class="chip warning">Phase-Based</span>
+        <ul class="timeline">
+          <li><strong>HiPO priority:</strong> Structured pricing exercise complete by March 31.</li>
+          <li><strong>Flagship adjustments:</strong> Learnings applied by April 30.</li>
+          <li><strong>Plus:</strong> Define increase timing for new customers, existing customers, and open proposal pricing deadlines.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="ws">Workstream 7</span>
+        <h3>Sales &amp; Marketing Collateral</h3>
+        <span class="chip warning">Multi-Track</span>
+        <ul class="timeline">
+          <li><strong>InView:</strong> First priority; branding required for HiPO launch.</li>
+          <li><strong>Spotlight:</strong> Strong baseline; may require US-market repositioning.</li>
+          <li><strong>Caliper:</strong> In full swing; ready by April 30.</li>
+          <li><strong>PAPI:</strong> Planning required.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
